@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "angular-firebase-store"
+    }
+  },
+  "defaultProject": "angular-firebase-store",
+  "cli": {
+    "analytics": "ccde5bec-0a36-494a-9d5a-60e7232a5f3b"
+  }
 }
