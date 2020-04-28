@@ -1,0 +1,12 @@
+<div class="login-container">
+    <div>
+        <label for="email">Email:</label>
+        <input type="email" ngModel="email" [value]="email" #email=ngModel>
+    </div>
+    <div>
+        <label for="email">Email:</label>
+        <input type="password" ngModel="password" [value]="password" #password=ngModel>
+    </div>
+    <button (click)="login(email.value, password.value)">Login</button>
+    <button (click)="loginWithGoogle()">Signin With Google</button>
+</div>

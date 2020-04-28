@@ -1,1 +1,11 @@
-<p>add-books works!</p>
+<div>
+    <button (click)="logout()">Logout</button>
+    <h1>Add Book Page</h1>
+    <button (click)="addBook(book)">Add Book</button>
+    <button (click)="updateBook()">Update Book</button>
+    <div *ngFor="let book of books">
+        <div>Book:{{book.isbn}}</div>
+        <div>Book:{{book.title}}</div>
+        <button (click)="deleteBook(book.id)">Delete Book</button>
+    </div>
+</div>

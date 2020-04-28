@@ -9,16 +9,19 @@ export class BookServiceService {
   constructor(private firebase: AngularFirestore) { }
 
   addBook(data) {
-    return new Promise<any>((resolve, reject) => {
-      this.firebase.collection('books').add(data);
-    });
+    return this.firebase.collection('books').add(data);
   }
 
   getBooks() {
-    return new Promise<any>((resolve, reject) => {
-      this.firebase.collection('books').snapshotChanges().subscribe(data => {
-        console.log(data);
-      });
-    })
+   return this.firebase.collection('books').snapshotChanges();
   }
+
+  deleteBook(id) {
+      this.firebase.doc('books/'+id).delete();
+  }
+
+  updateBook(book) {
+    this.firebase.doc('books/'+book.id).update(book);
+  } 
+  
 }
