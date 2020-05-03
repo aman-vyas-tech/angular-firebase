@@ -56,8 +56,6 @@ export class AddBooksComponent implements OnInit {
     this.auth.logout();
   }
 
-  public loginWithGoogle() {
-    this.auth.loginWithGoogle();
-  }
+  
 
 }
